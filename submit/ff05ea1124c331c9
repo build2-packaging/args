@@ -1,0 +1,7 @@
+: 1
+name: args
+version: 6.4.6
+type: lib,binless
+language: c++
+summary: A simple header-only C++ argument parser library
+license: MIT
