@@ -1,6 +1,6 @@
-./: lib{args}: hxx{args.hxx.}
+./: lib{args}: hxx{args}
 {
   cxx.export.poptions = "-I$src_base"
 }
 
-hxx{args}: install = include/
+hxx{args}@./: install = include/
