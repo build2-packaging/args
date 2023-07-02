@@ -1,0 +1,6 @@
+$out_root/
+{
+  include args/
+}
+
+export $out_root/args/$import.target

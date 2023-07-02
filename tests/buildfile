@@ -1,0 +1,1 @@
+./: exe{tests}: hxx{catch.hpp.} cxx{test} $args
