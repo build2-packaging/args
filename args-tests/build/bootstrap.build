@@ -1,0 +1,11 @@
+project = args-tests
+
+using version
+using config
+using test
+using dist
+
+# Tests should not be installed.
+# Do not use 'install' module.
+#
+# using install

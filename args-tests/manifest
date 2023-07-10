@@ -1,9 +1,10 @@
 : 1
-name: args
-version: 6.4.6+1
-type: lib,binless
+name: args-tests
+version: 6.4.6+2
+type: exe
 language: c++
-summary: A simple header-only C++ argument parser library
+project: args
+summary: Tests for the args library
 license: MIT
 
 description-file: README.md
@@ -13,12 +14,14 @@ url: https://github.com/Taywee/args
 doc-url: https://taywee.github.io/args/
 email: taywee@gmx.com
 
+package-description-file: PACKAGE-README.md
 package-url: https://github.com/build2-packaging/args/
-package-email: lyrahgames@mailbox.org
-#build-error-email: lyrahgames@mailbox.org
+package-email: packaging@build2.org
+
+depends: * build2 >= 0.16.0
+depends: * bpkg >= 0.16.0
+
+depends: catch2 ^ 2.13.7
 
 builds: default
 builds: -( +windows &gcc &!optimized ) ; Unoptimized compilation with MinGW on Windows gets stuck.
-
-depends: * build2 >= 0.15.0
-depends: * bpkg >= 0.15.0

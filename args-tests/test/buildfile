@@ -1,0 +1,2 @@
+import catch2 = catch2%lib{catch2}
+exe{test}: {hxx cxx}{*} $args $catch2

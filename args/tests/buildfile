@@ -1,0 +1,3 @@
+import args = args%lib{args}
+
+exe{main-tests}: {hxx cxx}{*} $args

@@ -1,0 +1,7 @@
+lib{args}: hxx{args}
+
+# Export Options
+#
+lib{args}: cxx.export.poptions = "-I$src_base"
+
+# hxx{args}@./: install = include/
