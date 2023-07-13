@@ -1,0 +1,8 @@
+: 1
+name: args-tests
+version: 6.4.6+2
+type: exe
+language: c++
+project: args
+summary: Tests for the args library
+license: MIT
