@@ -1,0 +1,8 @@
+: 1
+name: args-tests
+version: 6.4.7
+type: exe
+language: c++
+project: args
+summary: C++ argument parser library, tests
+license: MIT
