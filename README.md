@@ -1,72 +1,41 @@
-<h1 align="center">
-    build2 Package for args
-</h1>
+# build2 Package for args
 
-<p align="center">
-    This project builds and defines the build2 package for <a href="https://github.com/taywee/args">args</a>.
-    A simple, small, flexible, single-header C++11 argument parsing library.
-</p>
+This project builds and defines the build2 package for [args](https://github.com/taywee/args), which is a simple, small, flexible, single-header C++11 argument parsing library.
 
-<p align="center">
-    <a href="https://github.com/taywee/args">
-        <img src="https://img.shields.io/website/https/github.com/taywee/args.svg?down_message=offline&label=Official&style=for-the-badge&up_color=blue&up_message=online">
-    </a>
-    <a href="https://github.com/build2-packaging/args">
-        <img src="https://img.shields.io/website/https/github.com/build2-packaging/args.svg?down_message=offline&label=build2&style=for-the-badge&up_color=blue&up_message=online">
-    </a>
-    <a href="https://cppget.org/args">
-        <img src="https://img.shields.io/website/https/cppget.org/args.svg?down_message=offline&label=cppget.org&style=for-the-badge&up_color=blue&up_message=online">
-    </a>
-    <a href="https://queue.cppget.org/args">
-        <img src="https://img.shields.io/website/https/queue.cppget.org/args.svg?down_message=empty&down_color=blue&label=queue.cppget.org&style=for-the-badge&up_color=orange&up_message=running">
-    </a>
-</p>
+[![Official](https://img.shields.io/website/https/github.com/taywee/args.svg?down_message=offline&label=Official&style=for-the-badge&up_color=blue&up_message=online)](https://github.com/taywee/args)
+[![build2](https://img.shields.io/website/https/github.com/build2-packaging/args.svg?down_message=offline&label=build2&style=for-the-badge&up_color=blue&up_message=online)](https://github.com/build2-packaging/args)
+[![cppget.org](https://img.shields.io/website/https/cppget.org/args.svg?down_message=offline&label=cppget.org&style=for-the-badge&up_color=blue&up_message=online)](https://cppget.org/args)
+[![queue.cppget.org](https://img.shields.io/website/https/queue.cppget.org/args.svg?down_message=empty&down_color=blue&label=queue.cppget.org&style=for-the-badge&up_color=orange&up_message=running)](https://queue.cppget.org/args)
 
 ## Usage
-Make sure to add the stable section of the `cppget.org` repository to your project's `repositories.manifest` to be able to fetch the package.
+Make sure to add the stable section of the `cppget.org` repository to your project's `repositories.manifest` to be able to fetch this package.
 
     :
     role: prerequisite
     location: https://pkg.cppget.org/1/stable
     # trust: ...
 
+If the stable section of `cppget.org` is not an option then add this Git repository itself instead as a prerequisite.
+
+    :
+    role: prerequisite
+    location: https://github.com/build2-packaging/args.git
+
 Add the respective dependency in your project's `manifest` file to make the package available for import.
 
-    depends: args ^ 6.4.6
+    depends: args ^6.4.7
 
-The single header-only C++ library to use args as command-line argument parser can be imported by the following declaration in a `buildfile`.
+The library can be imported by the following declaration in a `buildfile`.
 
     import args = args%lib{args}
 
 ## Configuration
-There are no configuration options vailable.
+There are no configuration options available.
 
 ## Issues
 Currently, there are no known issues.
 
 ## Contributing
-Thanks in advance for your help and contribution to keep this package up-to-date.
-For now, please, file an issue on [GitHub](https://github.com/build2-packaging/args/issues) for everything that is not described below.
-
-### Recommend Updating Version
-Please, file an issue on [GitHub](https://github.com/build2-packaging/args/issues) with the new recommended version.
-
-### Update Version by Pull Request
-1. Fork the repository on [GitHub](https://github.com/build2-packaging/args) and clone it to your local machine.
-2. Run `git submodule init` and `git submodule update` to get the current upstream directory.
-3. Inside the `upstream` directory, checkout the new library version `X.Y.Z` by calling `git checkout vX.Y.Z` that you want to be packaged.
-4. If needed, change source files, `buildfiles`, and symbolic links accordingly to create a working build2 package. Make sure not to directly depend on the upstream directory inside the build system but use symbolic links instead.
-5. Update library version in `manifest` file if it has changed or add package update by using `+n` for the `n`-th update.
-6. Make an appropriate commit message by using imperative mood and a capital letter at the start and push the new commit to the `master` branch.
-7. Run `bdep ci` and test for errors.
-8. If everything works fine, make a pull request on GitHub and write down the `bdep ci` link to your CI tests.
-9. After a successful pull request, we will run the appropriate commands to publish a new package version.
-
-### Update Version Directly if You Have Permissions
-1. Inside the `upstream` directory, checkout the new library version `X.Y.Z` by calling `git checkout vX.Y.Z` that you want to be packaged.
-2. If needed, change source files, `buildfiles`, and symbolic links accordingly to create a working build2 package. Make sure not to directly depend on the upstream directory inside the build system but use symbolic links instead.
-3. Update library version in `manifest` file if it has changed or add package update by using `+n` for the `n`-th update.
-4. Make an appropriate commit message by using imperative mood and a capital letter at the start and push the new commit to the `master` branch.
-5. Run `bdep ci` and test for errors and warnings.
-6. When successful, run `bdep release --tag --push` to push new tag version to repository.
-7. Run `bdep publish` to publish the package to [cppget.org](https://cppget.org).
+Thank you in advance for your help and contribution to keep this package up-to-date.
+Please, file an issue on [GitHub](https://github.com/build2-packaging/glm/issues) for questions, bug reports, or to recommend updating the package version.
+If you're making a pull request to fix bugs or update the package version yourself, refer to the [`build2` Packaging Guidelines](https://build2.org/build2-toolchain/doc/build2-toolchain-packaging.xhtml#core-version-management).
