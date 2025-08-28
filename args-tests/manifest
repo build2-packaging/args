@@ -4,7 +4,7 @@ version: 6.4.7-a.0.z
 type: exe
 language: c++
 project: args
-summary: Tests for the args library
+summary: C++ argument parser library, tests
 license: MIT
 
 description-file: README.md
@@ -18,8 +18,8 @@ package-description-file: PACKAGE-README.md
 package-url: https://github.com/build2-packaging/args/
 package-email: packaging@build2.org
 
-depends: * build2 >= 0.16.0
-depends: * bpkg >= 0.16.0
+depends: * build2 >= 0.17.0
+depends: * bpkg >= 0.17.0
 
 depends: catch2 ^ 2.13.7
 
